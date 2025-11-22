@@ -5,7 +5,7 @@ Students are expected to implement and analyze the behavior of hash functions,
 evaluate their efficiency, and understand their applications in computer science.
 
 Developer: Kuang-Yen, Tai  
-Email: twell9525@gmail.com 
+Email: twell9525@gmail.com  
 Develop platform: Windows 11
 
 ## My Hash Function
