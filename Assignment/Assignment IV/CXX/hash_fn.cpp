@@ -3,11 +3,10 @@
 int myHashInt(int key, int m)
 {
     const unsigned long long p = 2654435761;
-
     key = (p * key) % m;
 
     return key;
-}
+} 
 
 int myHashString(const std::string& str, int m)
 {
