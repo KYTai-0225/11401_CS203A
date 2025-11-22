@@ -4,23 +4,46 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: [Your Name]  
-Email: [Your email]  
+Developer: Kuang-Yen, Tai  
+Email: twell9525@gmail.com 
+Develop platform: Windows 11
 
 ## My Hash Function
 ### Integer Keys 
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+  //m is the size of the hash table
+  p = 2654435761  // A sufficiently large prime number
+
+  function myHashInt(key, m):
+      // Multiply the key by the large prime p, then modulo m to get the final index
+      key = (p * key) % m;
+
+      return key
   ```
-- Rationale: [Explain your design choices and how they minimize collisions.]
+- Rationale: This desing utilize the Multiplication Method, multiplying the key by the large prime p. This prime number fundamentally scrambles the input key's bit patterns, generating a strong Avalanche Effect that breaks any sequential or predictable key patterns. The high dispersion achieved before the final modulo m operation is the core strategy for minimizing collisions.
 
 ### Non-integer Keys
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+  // m: The size of the hash table
+  // p: A prime number used as a multiplier
+  // str: The input string (non-integer key)
+  // hash: An initial hash value 
+
+  hash = 0
+  p = 31 // A prime base for the polynomial hash
+
+  for (char c : str)
+  {
+      // Convert the character to its ASCII/numeric value, multiply by p,
+      // and add it to the running hash.
+      hash = (hash + p * static_cast<unsigned char>(c)) % m;
+  }
+
+return hash
   ```
-- Rationale: [Explain your approach and its effectiveness for non-integer keys.]
+- Rationale: The key step is the inclusion of the prime multiplier p, which ensures the hash result is dependent on the order of the characters, not just their sum. This approach effectively distinguishes between similar strings (like anagrams), achieving high dispersion for string keys and minimizing collisions.
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
