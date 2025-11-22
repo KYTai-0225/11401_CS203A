@@ -88,21 +88,72 @@ Email: [Your email]
   -----------------
   21      1
   22      2
-  ...
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
   === Table Size m = 11 ===
   Key     Index
   -----------------
-  21      10
+  21      1
   22      0
-  ...
+  23      10
+  24      9
+  25      8
+  26      7
+  27      6
+  28      5
+  29      4
+  30      3
+  51      4
+  52      3
+  53      2
+  54      1
+  55      0
+  56      10
+  57      9
+  58      8
+  59      7
+  60      6
 
   === Table Size m = 37 ===
   Key     Index
   -----------------
-  21      21
-  22      22
-  ...
+  21      5
+  22      7
+  23      9
+  24      11
+  25      13
+  26      15
+  27      17
+  28      19
+  29      21
+  30      23
+  51      28
+  52      30
+  53      32
+  54      34
+  55      36
+  56      1
+  57      3
+  58      5
+  59      7
+  60      9
 
   === Hash Function Observation (C++ Version) ===
 
@@ -111,21 +162,86 @@ Email: [Your email]
   -----------------
   21      1
   22      2
-  ...
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
   === Table Size m = 11 ===
   Key     Index
   -----------------
-  21      10
+  21      1
   22      0
-  ...
+  23      10
+  24      9
+  25      8
+  26      7
+  27      6
+  28      5
+  29      4
+  30      3
+  51      4
+  52      3
+  53      2
+  54      1
+  55      0
+  56      10
+  57      9
+  58      8
+  59      7
+  60      6
 
   === Table Size m = 37 ===
   Key     Index
   -----------------
-  21      21
-  22      22
-  ...
+  21      5
+  22      7
+  23      9
+  24      11
+  25      13
+  26      15
+  27      17
+  28      19
+  29      21
+  30      23
+  51      28
+  52      30
+  53      32
+  54      34
+  55      36
+  56      1
+  57      3
+  58      5
+  59      7
+  60      9
+
+  === String Hash (m = 10) ===
+  Key     Index
+  -----------------
+  cat     2
+  dog     4
+  bat     1
+  cow     9
+  ant     3
+  owl     8
+  bee     0
+  hen     5
+  pig     0
+  fox     3
   ```
 
 - Example output for strings:
@@ -133,23 +249,44 @@ Email: [Your email]
   === String Hash (m = 10) ===
   Key     Index
   -----------------
-  cat     0
-  dog     0
-  ...
+  cat     2
+  dog     4
+  bat     1
+  cow     9
+  ant     3
+  owl     8
+  bee     0
+  hen     5
+  pig     0
+  fox     3
 
   === String Hash (m = 11) ===
   Key     Index
   -----------------
-  cat     0
-  dog     0
-  ...
+  cat     3
+  dog     10
+  bat     5
+  cow     2
+  ant     3
+  owl     6
+  bee     5
+  hen     8
+  pig     9
+  fox     5
 
   === String Hash (m = 37) ===
   Key     Index
   -----------------
-  cat     0
-  dog     0
-  ...
+  cat     15
+  dog     3
+  bat     21
+  cow     24
+  ant     23
+  owl     7
+  bee     13
+  hen     34
+  pig     4
+  fox     0
   ```
 
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
