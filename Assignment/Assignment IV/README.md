@@ -44,6 +44,7 @@ Develop platform: Windows 11
 return hash
   ```
 - Rationale: The key step is the inclusion of the prime multiplier p, which ensures the hash result is dependent on the order of the characters, not just their sum. This approach effectively distinguishes between similar strings (like anagrams), achieving high dispersion for string keys and minimizing collisions.
+  ˋˋˋ
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
