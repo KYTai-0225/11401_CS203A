@@ -33,5 +33,4 @@ Due to differences in compiler commands and standards between C and C++ language
 
 **A permanent or streamlined solution for automatically switching the C/C++ build environment has not yet been discovered.**
 
----
-*(Future update to seek a more elegant C/C++ environment switching mechanism.)*
+
