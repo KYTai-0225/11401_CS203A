@@ -29,7 +29,7 @@ A temporary solution was found by modifying the workspace's build configuration 
 
 ### 3. Unresolved Challenge: Switching Between C and C++ Compilers
 
-Due to differences in compiler commands and standards between C and C++ languages, it is currently necessary to **manually modify the `tasks.json`** file's compiler path or command (e.g., switching from `gcc` to `g++`) every time development switches between a C project and a C++ project.
+Due to differences in compiler commands and standards between C and C++ languages, it is currently necessary to **manually modify the `tasks.json`** file's compiler path or command every time development switches between a C project and a C++ project.
 
 **A permanent or streamlined solution for automatically switching the C/C++ build environment has not yet been discovered.**
 
