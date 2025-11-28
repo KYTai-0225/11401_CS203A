@@ -11,13 +11,13 @@ This document records the experience and configuration steps discovered while se
 
 ### Primary Challenge: Multi-File Compilation and Header File Issues
 
-#### Problem Description
+- Problem Description
 
 After writing code in VSCode, if a project consists of multiple source files (e.g., a `main.c` and other module files), and the `main` function needs to call content defined in these modules (via `#include` directives), **VSCode cannot directly compile and link all source files within the same folder.**
 
 This results in a linking error where the `main` function cannot find the **implementation content** of the functions declared in the header files.
 
-#### Temporary Fix: Manually Modifying `tasks.json`
+- Temporary Fix: Manually Modifying `tasks.json`
 
 A temporary solution was found by modifying the workspace's build configuration file, `tasks.json`.
 
