@@ -22,6 +22,7 @@ Develop platform: Windows 11
       return key
   ```
 - Rationale: This desing utilize the Multiplication Method, multiplying the key by the large prime p. This prime number fundamentally scrambles the input key's bit patterns, generating a strong Avalanche Effect that breaks any sequential or predictable key patterns. The high dispersion achieved before the final modulo m operation is the core strategy for minimizing collisions.
+- Reference: https://www.hello-algo.com/zh-hant/chapter_hashing/hash_algorithm/
 
 ### Non-integer Keys
 - Formula / pseudocode:
@@ -44,6 +45,7 @@ Develop platform: Windows 11
   return hash
   ```
 - Rationale: The key step is the inclusion of the prime multiplier p, which ensures the hash result is dependent on the order of the characters, not just their sum. This    approach effectively distinguishes between similar strings (like anagrams), achieving high dispersion for string keys and minimizing collisions.
+- Reference: https://www.hello-algo.com/zh-hant/chapter_hashing/hash_algorithm/
 
 
 ## Experimental Setup
