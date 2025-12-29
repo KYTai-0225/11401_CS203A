@@ -1,0 +1,3 @@
+# Homework Assignment V: Tree
+
+This assignment involves a comprehensive analysis of various tree data structures. Our objective is to bridge the gap between theory and practice by reviewing formal definitions, visualizing tree topologies, and performing comparative studies on different tree variants. Furthermore, this project incorporates the strategic use of AI tools to assist in synthesizing key concepts and streamlining the learning process.
