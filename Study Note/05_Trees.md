@@ -1,36 +1,36 @@
 # Trees
 
-## 1. 定義與術語
-* **定義**：非線性階層結構，由 Node 和 Edge 組成，**無迴圈 (Acyclic)**。
-* **術語**：
-    * **Root**: 根節點。
-    * **Leaf**: 葉節點 (無子節點)。
-    * **Height**: 節點到最遠葉子的路徑長度 (樹的高度 = Root 的高度)。
-    * **Depth**: 節點到 Root 的路徑長度。
+## 1. Definitions & Terminology
+* **Definition**: A non-linear hierarchical structure of Nodes and Edges; **Acyclic**.
+* **Terms**:
+    * **Root**: The top node.
+    * **Leaf**: A node with no children.
+    * **Height**: Length of the path to the deepest leaf (Tree Height = Root Height).
+    * **Depth**: Length of the path from the Root.
 
-## 2. Binary Tree 
-* **限制**：每個節點最多有 2 個子節點 (Left, Right)。
-* **特殊型態**：
-    * **Full**: 每個節點有 0 或 2 個子節點。
-    * **Complete**: 除了最後一層外全滿，且最後一層靠左填充。
+## 2. Binary Tree
+* **Constraint**: Each node has at most 2 children (Left, Right).
+* **Special Types**:
+    * **Full**: Every node has 0 or 2 children.
+    * **Complete**: All levels are filled except possibly the last, which is filled from left to right.
 
 ## 3. Binary Search Tree (BST)
-* **核心規則**：
-    $$\text{Left Subtree} < \text{Node} < \text{Right Subtree}$$
-* **操作複雜度**：
-    * 平均：O(log n) (與樹高成正比)。
-    * 最差：O(n) (當樹退化成一直線時)。
+* **Invariant**:
+    `Left Subtree < Node < Right Subtree`
+* **Complexity**:
+    * Average: `O(log n)` (proportional to tree height).
+    * Worst: `O(n)` (when the tree degenerates into a line).
 
 ## 4. Traversal
-* **DFS (深度優先)** - 使用 Stack 或 Recursion:
-    1. **Preorder**: Root $\to$ Left $\to$ Right
-    2. **Inorder**: Left $\to$ Root $\to$ Right (BST 會得到排序數列)
-    3. **Postorder**: Left $\to$ Right $\to$ Root
-* **BFS (廣度優先)** - 使用 Queue:
-    * **Level-order**: 由上而下，由左而右。
+* **DFS (Depth-First)** - Uses Stack or Recursion:
+    1. **Preorder**: Root → Left → Right
+    2. **Inorder**: Left → Root → Right (Produces sorted order in BST)
+    3. **Postorder**: Left → Right → Root
+* **BFS (Breadth-First)** - Uses Queue:
+    * **Level-order**: Top to bottom, left to right.
 
-## 5. AVL Tree
-* **目的**：解決 BST 退化成 O(n) 的問題。
-* **定義**：任一節點的左右子樹高度差 (Balance Factor) 不超過 1。
-* **機制**：透過 **Rotation (旋轉)** 來維持平衡 (LL, RR, LR, RL)。
-* **保證**：搜尋、插入、刪除皆維持 O(log n)。
+## 5. Balanced Tree (AVL Tree)
+* **Goal**: Solve the issue of BST degrading to `O(n)`.
+* **Definition**: For any node, the height difference (Balance Factor) between left and right subtrees is at most 1.
+* **Mechanism**: Uses **Rotation** (LL, RR, LR, RL) to maintain balance.
+* **Guarantee**: Search, Insert, and Delete operations remain `O(log n)`.

@@ -1,47 +1,48 @@
 # Arrays
 
-## 1. 核心概念
-* **定義**：一組存儲在 **連續記憶體位置 (Contiguous Memory Locations)** 的元素集合。
-* **基本特徵**：
-    * **索引存取**：透過 Index 直接存取，提供 O(1) 的隨機存取能力。
-    * **同質性**：所有元素通常具有相同的資料型態 (Data Type)。
-* **記憶體配置**：
-    * **1D 陣列**：線性排列。
-    * **2D 陣列**：通常為 **Row-major**，即先存第一列，再存第二列。
+## 1. Core Concepts
+* **Definition**: A collection of elements stored in **contiguous memory locations**.
+* **Key Characteristics**:
+    * **Random Access**: Elements can be accessed directly via index in `O(1)` time.
+    * **Homogeneity**: All elements usually have the same data type.
+* **Memory Layout**:
+    * **1D Array**: Linear arrangement.
+    * **2D Array**: Typically **Row-major**, storing the first row followed by the second.
+    * **Address Calculation**: `Address(A[i]) = Base_Address + i * sizeof(Type)`
 
-## 2. 類型與實作
+## 2. Types & Implementation
 
-### 靜態陣列 (Static Array)
-* **配置時機**：編譯時。
-* **位置**：Stack
-* **範例**：`int arr[10];`
-* **限制**：大小固定，無法在執行期間改變。
+### Static Array
+* **Allocation Time**: Compile-time.
+* **Location**: Stack.
+* **Example**: `int arr[10];`
+* **Limitation**: Fixed size; cannot be changed during runtime.
 
-### 動態陣列 (Dynamic Array)
-* **配置時機**：執行時。
-* **位置**：Heap
-* **操作**：
+### Dynamic Array
+* **Allocation Time**: Runtime.
+* **Location**: Heap.
+* **Operations**:
     * C: `malloc` / `free`
     * C++: `new` / `delete`
-* **Resizing 機制**：
-    1. 當空間不足時，配置一個更大的新陣列 (通常是 2 倍)。
-    2. 將舊資料複製 (Copy) 到新陣列。
-    3. 釋放 (Free) 舊陣列空間。
-    * **代價**：擴充操作的瞬間成本較高 (O(n))。
+* **Resizing Mechanism**:
+    1. Allocate a larger new array (usually 2x size) when full.
+    2. Copy old data to the new array.
+    3. Free the old array memory.
+    * **Cost**: The resizing operation takes `O(n)` time.
 
-## 3. 複雜度分析
+## 3. Complexity Analysis
 
-| 操作 | 時間複雜度 | 說明 |
+| Operation | Time Complexity | Note |
 | :--- | :--- | :--- |
-| **Access (讀取)** | O(1) | 透過記憶體位址直接計算。 |
-| **Search (搜尋)** | O(n) | 線性搜尋 (若無排序)。 |
-| **Insert (插入)** | O(n) | 需將插入點之後的元素往後搬移。 |
-| **Delete (刪除)** | O(n) | 需將刪除點之後的元素往前填補。 |
+| **Access** | `O(1)` | Direct calculation via memory address. |
+| **Search** | `O(n)` | Linear search (unsorted). |
+| **Insert** | `O(n)` | Requires shifting subsequent elements. |
+| **Delete** | `O(n)` | Requires shifting elements to fill the gap. |
 
-## 4. 優缺點 (Pros & Cons)
-* **優點**：
-    * 讀取速度極快。
-    * **Cache Friendly**：因為記憶體連續，CPU 快取命中率高。
-* **缺點**：
-    * 大小缺乏彈性 (靜態陣列)。
-    * 插入與刪除效率低 (涉及大量資料搬移)。
+## 4. Pros & Cons
+* **Pros**:
+    * Extremely fast read access.
+    * **Cache Friendly**: High CPU cache hit rate due to contiguous memory.
+* **Cons**:
+    * Inflexible size (Static).
+    * Inefficient insertion and deletion (requires data movement).

@@ -1,36 +1,36 @@
 # Hashing
 
-## 1. 核心概念
-* **目的**：將搜尋、插入、刪除的時間複雜度降至 **O(1)**。
-* **組成**：
-    * **Hash Function**: 將 Key 轉換為整數 Index 的函數。
-    * **Hash Table**: 實際儲存資料的陣列 (Bucket Array)。
+## 1. Core Concepts
+* **Goal**: Reduce Search, Insert, and Delete time complexity to **`O(1)`**.
+* **Components**:
+    * **Hash Function**: Maps a Key to an integer Index.
+    * **Hash Table**: The array (Bucket Array) that actually stores data.
 
 ## 2. Hash Function
-* **要求**：
-    * 計算速度快。
-    * 分佈均勻，避免群聚 (Clustering)。
-* **常見方法**：
-    * Division Method: `h(k) = k % m` (m 通常取質數)。
+* **Requirements**:
+    * Fast computation.
+    * Uniform distribution to avoid clustering.
+* **Common Methods**:
+    * Division Method: `h(k) = k % m` (m is usually a prime number).
     * Multiplication Method.
 
-## 3. 碰撞處理
-當兩個不同的 Key 對應到同一個 Index 時 (`h(k1) == h(k2)`)。
+## 3. Collision Resolution
+Happens when two different keys map to the same index (`h(k1) == h(k2)`).
 
-### Chaining 
-* **作法**：Hash Table 的每個 Bucket 是一個 **Linked List** 的 Head。
-* **運作**：
-    * 發生碰撞時，將新元素串接在該 Bucket 的 Linked List 後面。
-* **結構**：Array of Linked Lists。
-* **優點**：
-    * 處理簡單。
-    * 不會因為 Table 滿了而無法插入 (只要記憶體足夠)。
-* **缺點**：
-    * 需要額外的指標記憶體。
-    * 若 Hash Function 很差，特定 Bucket 的 List 會過長，退化成 O(n)。
+### Chaining (Linked List Method) - *Lecture Focus*
+* **Approach**: Each bucket in the Hash Table points to the Head of a **Linked List**.
+* **Operation**:
+    * Upon collision, the new element is appended to the list in that bucket.
+* **Structure**: Array of Linked Lists.
+* **Pros**:
+    * Simple to implement.
+    * No overflow unless memory is full.
+* **Cons**:
+    * Requires extra memory for pointers.
+    * If the Hash Function is poor, lists become long, degrading performance to `O(n)`.
 
-## 4. 應用場景
-* Symbol Table (編譯器)。
-* Dictionary / Map 資料結構。
-* DNS 快取。
-* 密碼驗證 (儲存 Hash 值而非明碼)。
+## 4. Use Cases
+* Symbol Tables (Compilers).
+* Dictionaries / Maps.
+* DNS Caching.
+* Password Verification (storing hashes instead of plain text).
