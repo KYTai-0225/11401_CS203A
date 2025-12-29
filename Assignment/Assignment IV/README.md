@@ -331,12 +331,12 @@ Develop platform: Windows 11
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
 
 ## Analysis
-- Prime vs non-prime `m`: Prime table sizes generally result in better distribution and fewer collisions.
-- Patterns or collisions: Non-prime hash table sizes tend to produce repetitive patterns, leading to more collisions, even though I use the Multiplication Method in my hash function.
-- Improvements: Use a prime table size, combined with a well-designed hash function (like the Multiplication Method or others), to effectively enhance data distribution.
+- Table Size(Prime vs. Non-prime): Choosing a prime number for the table size (m) significantly enhances data distribution. Prime sizes help break up patterns in input keys, ensuring that entries are spread more evenly across the table and reducing the likelihood of collisions compared to composite numbers.
+- Patterns and Collision Risks: Non-prime table sizes (especially powers of 2) are prone to repetitive hashing patterns. Even when using the Multiplication Method, if the constant or the table size shares common factors with the input data, it can cause "clustering," where multiple keys map to the same few slots.
+- Optimization Strategies: To maximize efficiency, combine a prime table size with a robust hash function. When resizing the table dynamically, always calculate the next available prime number to maintain optimal distribution and ensure the time complexity remains as close to O(1) as possible.
 
 ## Reflection
-1. Designing hash functions requires balancing simplicity and effectiveness to minimize collisions.
-2. Table size significantly impacts the uniformity of the hash distribution, with prime sizes performing better.
-3. The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
+1. Effective hash function design must balance low computational overhead with high collision resistance to maintain optimal performance.
+2. Table size is a primary factor in distribution uniformity; utilizing prime numbers significantly reduces clustering compared to non-prime sizes.
+3. The combination of a prime-sized table and a linear transformation formula provides the most consistent and uniform index mapping.
 4. Simply using the Multiplication Method might not be enough to guarantee an even distribution of keys.
