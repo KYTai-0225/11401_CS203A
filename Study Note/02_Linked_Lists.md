@@ -19,19 +19,19 @@
 ## 3. 關鍵操作 
 
 ### 存取 (Access)
-* **複雜度**：$O(n)$
+* **複雜度**：$ O(n) $
 * **說明**：不支援隨機存取，必須從 Head 開始順序走訪。
 
 ### 插入 (Insertion)
-* **Head 插入**：$O(1)$
+* **Head 插入**：$ O(1) $
     * `NewNode->next = Head; Head = NewNode;`
-* **中間/尾端插入**：$O(1)$ (若已知前一個節點位置 `Prev`)
+* **中間/尾端插入**：$ O(1) $ (若已知前一個節點位置 `Prev`)
     * `NewNode->next = Prev->next; Prev->next = NewNode;`
 
 ### 刪除 (Deletion)
-* **複雜度**：$O(1)$ (若已知 `Prev` 節點)
+* **複雜度**：$ O(1) $ (若已知 `Prev` 節點)
 * **邏輯**：`Prev->next = Target->next; free(Target);`
-* **注意**：若只給定 Target 節點 (單向鏈結)，則需從頭搜尋 Prev，總體變為 $O(n)$。
+* **注意**：若只給定 Target 節點 (單向鏈結)，則需從頭搜尋 Prev，總體變為 $ O(n) $。
 
 ### 移動節點 (MoveTo)
 * **步驟**：
