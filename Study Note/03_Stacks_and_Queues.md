@@ -9,7 +9,7 @@
     * `Peek()`: 查看頂端元素。
 * **實作**：
     * **Array**：使用 `top` 索引追蹤。Push 時 `top++`。
-    * **Linked List**：從 Head 進行 Insert/Delete ($O(1)$)。
+    * **Linked List**：從 Head 進行 Insert/Delete (O(1))。
 
 ## 2. Queue
 * **原則**：**FIFO** (First-In-First-Out, 先進先出)。
@@ -32,5 +32,5 @@
 
 | 資料結構 | Push/Enqueue | Pop/Dequeue |
 | :--- | :--- | :--- |
-| **Stack** | $O(1)$ | $O(1)$ |
-| **Queue** | $O(1)$ | $O(1)$ |
+| **Stack** | O(1) | O(1) |
+| **Queue** | O(1) | O(1) |

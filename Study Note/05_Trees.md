@@ -18,8 +18,8 @@
 * **核心規則**：
     $$\text{Left Subtree} < \text{Node} < \text{Right Subtree}$$
 * **操作複雜度**：
-    * 平均：$O(\log n)$ (與樹高成正比)。
-    * 最差：$O(n)$ (當樹退化成一直線時)。
+    * 平均：O(log n) (與樹高成正比)。
+    * 最差：O(n) (當樹退化成一直線時)。
 
 ## 4. Traversal
 * **DFS (深度優先)** - 使用 Stack 或 Recursion:
@@ -30,7 +30,7 @@
     * **Level-order**: 由上而下，由左而右。
 
 ## 5. AVL Tree
-* **目的**：解決 BST 退化成 $O(n)$ 的問題。
+* **目的**：解決 BST 退化成 O(n) 的問題。
 * **定義**：任一節點的左右子樹高度差 (Balance Factor) 不超過 1。
 * **機制**：透過 **Rotation (旋轉)** 來維持平衡 (LL, RR, LR, RL)。
-* **保證**：搜尋、插入、刪除皆維持 $O(\log n)$。
+* **保證**：搜尋、插入、刪除皆維持 O(log n)。
