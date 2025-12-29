@@ -1,4 +1,4 @@
-# Arrays (陣列)
+# Arrays
 
 ## 1. 核心概念
 * **定義**：一組存儲在 **連續記憶體位置 (Contiguous Memory Locations)** 的元素集合。
@@ -8,19 +8,18 @@
 * **記憶體配置**：
     * **1D 陣列**：線性排列。
     * **2D 陣列**：通常為 **Row-major**，即先存第一列，再存第二列。
-    * **位址計算**：`Address(A[i]) = Base_Address + i * sizeof(Type)`
 
 ## 2. 類型與實作
 
 ### 靜態陣列 (Static Array)
-* **配置時機**：編譯時 (Compile-time)。
-* **位置**：Stack (堆疊區)。
+* **配置時機**：編譯時。
+* **位置**：Stack
 * **範例**：`int arr[10];`
 * **限制**：大小固定，無法在執行期間改變。
 
 ### 動態陣列 (Dynamic Array)
 * **配置時機**：執行時。
-* **位置**：Heap。
+* **位置**：Heap
 * **操作**：
     * C: `malloc` / `free`
     * C++: `new` / `delete`
