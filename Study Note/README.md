@@ -1,4 +1,4 @@
-# Data Structures Study Notes
+# Study Note
 
 This repository contains comprehensive Data Structures study notes.
 The content is summarized from course lectures, covering topics from fundamental Arrays and Linked Lists to advanced Trees, Graphs, and Complexity Analysis.

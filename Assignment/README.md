@@ -1,8 +1,8 @@
-# 11401_CS203A Data Structure - Homework
+# Assignments
 
 This repository contains the digital assignments and homework solutions for the **Data Structures** course.
 
-## Assignments
+## Contents
 
 | Assignment | Topic | Description |
 | :--- | :--- | :--- |
