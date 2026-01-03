@@ -1,4 +1,4 @@
-# Assignments
+# Assignment
 
 This repository contains the digital assignments and homework solutions for the **Data Structures** course.
 

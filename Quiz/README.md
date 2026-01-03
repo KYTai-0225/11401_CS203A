@@ -4,7 +4,7 @@ This directory archives my in-class paper quizzes, serving as a study guide to i
 
 ## Contents
 
-[**Quiz I**](./Quiz_I.pdf) 
+[**Quiz I**](./Quiz_I.pdf)  
 [**Quiz II**](./Quiz_II.pdf)    
 [**Quiz III**](./Quiz_III.pdf)    
 [**Quiz IV**](./Quiz_IV.pdf)       
